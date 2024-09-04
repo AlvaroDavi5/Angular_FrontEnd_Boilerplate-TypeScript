@@ -117,12 +117,7 @@
 		/* Completeness */
 		// "skipDefaultLibCheck": true,
 		"skipLibCheck": false,
-		"pretty": true,
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
+		"pretty": true
 	},
 	"angularCompilerOptions": {
 		"enableI18nLegacyMessageIdFormat": false,
@@ -134,9 +129,7 @@
 		"src/**/*.ts",
 		"src/**/*.tsx",
 		"src/**/*.js",
-		"src/**/*.jsx",
-		"next-env.d.ts",
-		".next/types/**/*.ts"
+		"src/**/*.jsx"
 	],
 	"exclude": [
 		"node_modules",
