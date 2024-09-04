@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./tsconfig.base.json",
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.js",
+		"src/**/*.jsx",
+		"scripts/**/*.ts",
+		"scripts/**/*.js",
+		"tests/**/*.ts",
+		"tests/**/*.tsx",
+		"tests/**/*.js",
+		"tests/**/*.jsx"
+	],
+	"exclude": [
+		"node_modules",
+		"build"
+	]
+}

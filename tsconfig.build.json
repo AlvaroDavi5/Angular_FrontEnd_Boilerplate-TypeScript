@@ -1,0 +1,29 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./tsconfig.base.json",
+	"files": [
+		"src/main.ts",
+		"src/main.server.ts",
+		"server.ts"
+	],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.js",
+		"src/**/*.jsx",
+		"build"
+	],
+	"exclude": [
+		"node_modules",
+		"scripts",
+		"tests",
+		"**/*.test.ts",
+		"**/*.test.tsx",
+		"**/*.test.js",
+		"**/*.test.jsx",
+		"**/*.spec.ts",
+		"**/*.spec.tsx",
+		"**/*.spec.js",
+		"**/*.spec.jsx"
+	]
+}

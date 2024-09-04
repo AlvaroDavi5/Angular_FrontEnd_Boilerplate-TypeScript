@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"isolatedModules": false,
+		"types": [
+			"jasmine"
+		]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.js",
+		"src/**/*.jsx",
+		"tests/**/*.ts",
+		"tests/**/*.tsx",
+		"tests/**/*.js",
+		"tests/**/*.jsx"
+	],
+	"exclude": [
+		"node_modules",
+		"build",
+		"scripts"
+	]
+}
