@@ -1,13 +1,19 @@
 {
-	"name": "my-angular-app",
+	"name": "angular_frontend_boilerplate",
 	"version": "1.0.0",
 	"scripts": {
-		"ng": "ng",
-		"start": "ng serve",
+		"typecheck": "tsc --project tsconfig.json --noEmit",
 		"build": "ng build",
-		"watch": "ng build --watch --configuration development",
+		"build:watch": "ng build --watch --configuration development",
+		"start": "ng serve --port 3001",
+		"start:dev": "ng serve --port 3001 --open",
+		"serve:ssr:angular_frontend_boilerplate": "node dist/angular_frontend_boilerplate/server/server.mjs",
+		"security-check": "",
+		"mock-dependencies": "",
 		"test": "ng test",
-		"serve:ssr:my-angular-app": "node dist/my-angular-app/server/server.mjs"
+		"prettify": "",
+		"commit": "",
+		"postinstall": ""
 	},
 	"private": true,
 	"dependencies": {

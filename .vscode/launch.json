@@ -2,29 +2,28 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Node.js: Launch Current File",
-			"type": "node",
+			"name": "Angular: debug server-side",
+			"type": "node-terminal",
 			"request": "launch",
-			"program": "${fileDirname}/${file}",
-			"skipFiles": [
-				"<node_internals>/**"
-			]
+			"command": "npm run start:dev"
 		},
 		{
-			"name": "Node.js: Attach by Process ID",
-			"type": "node",
-			"request": "attach",
-			"processId": "${command:PickProcess}",
-			"skipFiles": [
-				"<node_internals>/**"
-			]
-		},
-		{
-			"name": "Chrome: Launch against localhost",
+			"name": "Angular: debug client-side",
 			"type": "chrome",
 			"request": "launch",
 			"webRoot": "${workspaceFolder}",
-			"url": "http://localhost:8080/"
+			"url": "http://localhost:3001"
+		},
+		{
+			"name": "Angular: debug full stack",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run start:dev",
+			"serverReadyAction": {
+				"pattern": "- Local:.+(https?://.+)",
+				"uriFormat": "%s",
+				"action": "debugWithChrome"
+			}
 		}
 	]
 }
