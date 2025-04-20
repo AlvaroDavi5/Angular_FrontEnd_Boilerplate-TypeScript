@@ -82,7 +82,7 @@
 							"zone.js",
 							"zone.js/testing"
 						],
-						"tsConfig": "tsconfig.spec.json",
+						"tsConfig": "tsconfig.test.json",
 						"assets": [
 							{
 								"glob": "**/*",
