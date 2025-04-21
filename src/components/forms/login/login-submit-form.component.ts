@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,26 +9,29 @@ import { HttpClient } from '@angular/common/http';
 	standalone: false,
 })
 export class LoginSubmitFormComponent {
-	public emailLabel = 'Email';
+	public emailLabel = 'e-Mail';
 	public passwordLabel = 'Senha';
 	public submitLabel = 'Entrar';
-	public readonly loginForm: FormGroup;
+	public readonly loginForm: FormGroup<{
+		email_input: FormControl<string | null>;
+		password_input: FormControl<string | null>;
+	}>;
 
 	constructor(
 		private readonly formBuilder: FormBuilder,
 		private readonly httpClient: HttpClient,
 	) {
 		this.loginForm = this.formBuilder.group({
-			email_input: [],
-			password_input: [],
+			email_input: ['', [Validators.required, Validators.email]],
+			password_input: ['', Validators.required]
 		});
 	}
 
 	public onSubmit(): void {
-		const data = this.loginForm.value;
-		console.log(data)
+		const { email_input: email, password_input: password } = this.loginForm.value;
 
-		this.httpClient.post<unknown>('http://seu-backend.com/api/formulario', data)
+		const payload = { email, password };
+		this.httpClient.post<unknown>('http://seu-backend.com/api/formulario', payload)
 			.subscribe({
 				next: (res) => {
 					console.log('Sucesso:', res);

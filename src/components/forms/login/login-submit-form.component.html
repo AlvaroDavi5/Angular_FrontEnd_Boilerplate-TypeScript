@@ -1,15 +1,21 @@
-<div class="login_form">
+<div id="login_form_div" class="login_form">
 	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 		<label>
 			{{ emailLabel }}:
-			<input type="email" formControlName="email_input">
+			<br />
+			<input type="email" formControlName="email_input" required placeholder="email@example.com">
+			<div *ngIf="loginForm.get('email_input')?.invalid && loginForm.get('email_input')?.touched">
+				<small *ngIf="loginForm.get('email_input')?.errors?.['required']">O e-mail é obrigatório.</small>
+				<small *ngIf="loginForm.get('email_input')?.errors?.['email']">Formato de e-mail inválido.</small>
+			</div>
 		</label>
 		<br />
 		<label>
 			{{ passwordLabel }}:
-			<input type="password" formControlName="password_input">
+			<br />
+			<input type="password" formControlName="password_input" required placeholder="Jamais compartilhe sua senha!">
 		</label>
 		<br />
-		<button type="submit">{{ submitLabel }}</button>
+		<button type="submit" [disabled]="loginForm.invalid">{{ submitLabel }}</button>
 	</form>
 </div>

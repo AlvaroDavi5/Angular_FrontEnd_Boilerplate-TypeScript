@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from '@components/buttons/buttons.module';
 import { FormsModule } from '@components/forms/forms.module';
 
@@ -12,7 +11,6 @@ import { FormsModule } from '@components/forms/forms.module';
 	standalone: true,
 	imports: [
 		RouterOutlet,
-		ReactiveFormsModule,
 		ButtonsModule,
 		FormsModule,
 	],
