@@ -26,7 +26,7 @@ Node.js Boilerplate for Front-End using TypeScript and Angular.
 
 1. Install project dependencies  
 ```shell
-yarn install
+npm install
 ```
 
 #### What to do if the service goes down
@@ -48,8 +48,8 @@ source ./.env # load envs on shell session
 ## Running Locally
 
 ```shell
-yarn run mock-dependencies # start external service mock
-yarn run start:dev # start application in development mode
+npm run mock-dependencies # start external service mock
+npm run start:dev # start application in development mode
 ```
 
 ## Interface
@@ -62,12 +62,12 @@ ___
 
 ### TO DO
 
-[Angular](https://Angular.dev/reference/Angular)
 - **Concepts**
-	* Rendering
-		- [ ] Static Site Generation
-		- [ ] Client-Side Rendering
-		- [ ] Server-Side Rendering
+	* Modularization
+		- [ ] Dependency Injection
+	* Application State
+		- [ ] Page state
+		- [ ] Global states
 	* Components
 		- [ ] Form
 		- [ ] NavBar
@@ -79,7 +79,7 @@ ___
 		- [ ] Scroller
 	* Actions
 		- [ ] Validations
-		- [ ] Requests (Http & GraphQl)
+		- [ ] Requests (Http)
 		- [ ] Connections (WebSockets)
 		- [ ] Hooks
 - **Tests**
