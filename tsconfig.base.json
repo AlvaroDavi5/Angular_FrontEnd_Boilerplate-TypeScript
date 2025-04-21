@@ -42,17 +42,14 @@
 			"tests"
 		],
 		"paths": {
-			"@dev/*": [
-				"src/dev/*"
-			],
-			"@pages/*": [
-				"src/modules/pages/*"
+			"@app/*": [
+				"src/app/*"
 			],
 			"@components/*": [
-				"src/modules/components/*"
+				"src/components/*"
 			],
-			"@shared/*": [
-				"src/shared/*"
+			"@pages/*": [
+				"src/app/pages/*"
 			]
 		},
 		// "typeRoots": [],
