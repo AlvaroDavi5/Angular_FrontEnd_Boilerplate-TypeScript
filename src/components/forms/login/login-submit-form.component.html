@@ -1,0 +1,15 @@
+<div class="login_form">
+	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+		<label>
+			{{ emailLabel }}:
+			<input type="email" formControlName="email_input">
+		</label>
+		<br />
+		<label>
+			{{ passwordLabel }}:
+			<input type="password" formControlName="password_input">
+		</label>
+		<br />
+		<button type="submit">{{ submitLabel }}</button>
+	</form>
+</div>

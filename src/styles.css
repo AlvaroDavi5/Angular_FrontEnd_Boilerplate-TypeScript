@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+button {
+	cursor: pointer;
+	height: 30pt;
+	min-width: 60pt;
+	max-width: 90pt;
+	margin: 2px;
+	padding: 0px 30px;
+	font-weight: bolder;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: 10px;
+}

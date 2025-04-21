@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonsModule } from '@components/buttons/buttons.module';
+import { FormsModule } from '@components/forms/forms.module';
 
 
 @Component({
@@ -7,8 +10,13 @@ import { RouterOutlet } from '@angular/router';
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.css',
 	standalone: true,
-	imports: [RouterOutlet],
+	imports: [
+		RouterOutlet,
+		ReactiveFormsModule,
+		ButtonsModule,
+		FormsModule,
+	],
 })
 export class AppComponent {
-	title = 'Angular Frontend Boilerplate';
+	public readonly title = 'Angular Frontend Boilerplate';
 }
