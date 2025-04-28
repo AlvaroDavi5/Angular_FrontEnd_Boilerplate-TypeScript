@@ -19,7 +19,8 @@
 			"DOM.Iterable"
 		],
 		"types": [
-			"node"
+			"node",
+			"jasmine"
 		],
 		"jsx": "preserve",
 		"experimentalDecorators": true,
@@ -41,6 +42,9 @@
 			"tests"
 		],
 		"paths": {
+			"@dev/*": [
+				"src/dev/*"
+			],
 			"@app/*": [
 				"src/app/*"
 			],
@@ -123,9 +127,7 @@
 	},
 	"include": [
 		"src/**/*.ts",
-		"src/**/*.tsx",
-		"src/**/*.js",
-		"src/**/*.jsx"
+		"src/**/*.js"
 	],
 	"exclude": [
 		"node_modules",
@@ -133,13 +135,9 @@
 		"scripts",
 		"tests",
 		"**/*.test.ts",
-		"**/*.test.tsx",
 		"**/*.test.js",
-		"**/*.test.jsx",
 		"**/*.spec.ts",
-		"**/*.spec.tsx",
-		"**/*.spec.js",
-		"**/*.spec.jsx"
+		"**/*.spec.js"
 	],
 	"ts-node": {
 		"require": [

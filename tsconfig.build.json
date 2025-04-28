@@ -8,9 +8,7 @@
 	],
 	"include": [
 		"src/**/*.ts",
-		"src/**/*.tsx",
 		"src/**/*.js",
-		"src/**/*.jsx",
 		"build"
 	],
 	"exclude": [
@@ -18,12 +16,8 @@
 		"scripts",
 		"tests",
 		"**/*.test.ts",
-		"**/*.test.tsx",
 		"**/*.test.js",
-		"**/*.test.jsx",
 		"**/*.spec.ts",
-		"**/*.spec.tsx",
-		"**/*.spec.js",
-		"**/*.spec.jsx"
+		"**/*.spec.js"
 	]
 }
