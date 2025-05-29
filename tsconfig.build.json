@@ -1,16 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "./tsconfig.base.json",
-	"files": [
-		"src/main.ts",
-		"src/main.server.ts",
-		"server.ts"
-	],
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.js",
-		"build"
-	],
 	"exclude": [
 		"node_modules",
 		"scripts",
