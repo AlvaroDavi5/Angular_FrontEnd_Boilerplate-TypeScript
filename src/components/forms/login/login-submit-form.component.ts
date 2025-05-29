@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
 	selector: 'login-submit-form',
 	templateUrl: './login-submit-form.component.html',
-	styleUrl: '../forms.style.css',
+	styleUrl: './login-submit-form.style.css',
 	standalone: false,
 })
 export class LoginSubmitFormComponent {
