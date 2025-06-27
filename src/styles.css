@@ -1,4 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--primary-color: #34cb79;
+	--secondary-color: #322153;
+	--sky-color: #252558;
+	--dark-color: #02001a;
+	--light-color: #fdf7f7;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+html,
+body {
+	font-family: Roboto, sans-serif;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	color: #ffffff;
+	background-color: var(--dark-color);
+	-webkit-font-smoothing: antialiased;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Ubuntu', sans-serif;
+	color: var(--primary-color);
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 0.9rem;
+}
+
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+ul {
+	list-style-type: none;
+}
 
 button {
 	cursor: pointer;
