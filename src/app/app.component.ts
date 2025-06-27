@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ButtonsModule } from '@components/buttons/buttons.module';
-import { FormsModule } from '@components/forms/forms.module';
+import { PagesModule } from '@pages/pages.module';
+import { PagesRoutingModule } from '@pages/pages-routing.module';
 
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrl: './app.component.css',
 	standalone: true,
 	imports: [
-		RouterOutlet,
-		ButtonsModule,
-		FormsModule,
+		PagesModule,
+		PagesRoutingModule,
 	],
 })
 export class AppComponent {
-	public readonly title = 'Angular Frontend Boilerplate';
 }
