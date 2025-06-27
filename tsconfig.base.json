@@ -52,7 +52,7 @@
 				"src/components/*"
 			],
 			"@pages/*": [
-				"src/app/pages/*"
+				"src/pages/*"
 			]
 		},
 		// "typeRoots": [],
