@@ -1,13 +1,14 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"outDir": "build/app"
+	},
 	"exclude": [
 		"node_modules",
 		"scripts",
 		"tests",
 		"**/*.test.ts",
-		"**/*.test.js",
-		"**/*.spec.ts",
-		"**/*.spec.js"
+		"**/*.spec.ts"
 	]
 }

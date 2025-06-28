@@ -2,20 +2,21 @@
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
-		"isolatedModules": false,
+		"outDir": "build/test",
+		"allowJs": false,
 		"types": [
 			"jasmine"
 		]
 	},
 	"include": [
-		"src/**/*.ts",
-		"src/**/*.js",
-		"tests/**/*.ts",
-		"tests/**/*.js"
+		"server.ts",
+		"src/**/.ts",
+		"src/**/*.spec.ts",
+		"src/**/*.test.ts",
+		"src/**/*.d.ts",
+		"tests/**/*.ts"
 	],
 	"exclude": [
-		"node_modules",
-		"build",
 		"scripts"
 	]
 }

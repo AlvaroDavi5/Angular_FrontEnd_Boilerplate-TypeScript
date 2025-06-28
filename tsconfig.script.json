@@ -3,15 +3,13 @@
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
 		"module": "CommonJS",
-		"outDir": "build-scripts"
+		"outDir": "build/scripts"
 	},
 	"include": [
 		"src/**/*.ts",
-		"src/**/*.js",
 		"scripts/**/*.ts",
 		"scripts/**/*.js",
-		"tests/**/*.ts",
-		"tests/**/*.js"
+		"tests/**/*.ts"
 	],
 	"exclude": [
 		"node_modules",

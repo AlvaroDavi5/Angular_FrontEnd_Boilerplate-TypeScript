@@ -127,8 +127,7 @@
 	},
 	"include": [
 		"server.ts",
-		"src/**/*.ts",
-		"src/**/*.js"
+		"src/**/*.ts"
 	],
 	"exclude": [
 		"node_modules",
@@ -136,9 +135,7 @@
 		"scripts",
 		"tests",
 		"**/*.test.ts",
-		"**/*.test.js",
-		"**/*.spec.ts",
-		"**/*.spec.js"
+		"**/*.spec.ts"
 	],
 	"ts-node": {
 		"require": [
