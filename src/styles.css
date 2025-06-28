@@ -22,8 +22,8 @@ body {
 }
 
 body {
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	color: #ffffff;
 	background-color: var(--dark-color);
 	-webkit-font-smoothing: antialiased;

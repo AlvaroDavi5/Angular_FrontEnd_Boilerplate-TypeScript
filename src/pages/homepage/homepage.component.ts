@@ -9,18 +9,18 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 export class HomepageComponent implements OnInit {
 	public readonly myName = 'Álvaro Alves';
 	public readonly myOccupation = 'Software Engineer';
-	public menuEnabled = false;
-	private readonly menuContent = `
-		<nav>
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#experiences">Experiences</a></li>
-				<li><a href="#skills">Skills</a></li>
-			</ul>
-		</nav>
-	`;
+	public readonly myProfilePicture = 'https://github.com/AlvaroDavi5.png';
+	public readonly iconsHref = {
+		linkedin: 'https://www.linkedin.com/in/alvaro-davi/',
+		github: 'https://github.com/AlvaroDavi5',
+		email: 'mailto:alvaro.davisa@gmail.com',
+		curriculum: 'https://drive.google.com/file/d/1dcYonafspY1OKwCt9Tp6gtl5OlJuchMN/view',
+	};
+	private menuEnabled = false;
 
-	constructor(private elementRef: ElementRef<HTMLElement>) { }
+	constructor(
+		private readonly elementRef: ElementRef<HTMLElement>,
+	) { }
 
 	ngOnInit(): void {
 		this.initializeSkillsToggles();
@@ -28,20 +28,17 @@ export class HomepageComponent implements OnInit {
 
 	public toggleOptionsMenu(): void {
 		this.menuEnabled = !this.menuEnabled;
-		const optionsMenu: HTMLElement | null = this.elementRef.nativeElement.querySelector('#menu-options');
-		if (!optionsMenu) {
-			return;
-		}
-		if (this.menuEnabled) {
-			optionsMenu.innerHTML = this.menuContent;
+		const optionsMenu = this.elementRef.nativeElement.querySelector<HTMLElement>('#menu-options');
+		if (optionsMenu) {
+			optionsMenu.style.display = this.menuEnabled === true ? 'flex' : 'none';
 		}
 	}
 
 	private initializeSkillsToggles(): void {
-		const skillsDetails = this.elementRef.nativeElement.querySelectorAll('div.skills-details');
+		const skillsDetails = this.elementRef.nativeElement.querySelectorAll<HTMLElement>('div.skills-details');
 
-		skillsDetails.forEach((skillDetail: Element) => {
-			const knowledgements: HTMLElement | null = skillDetail.querySelector('div.knowledgements');
+		skillsDetails.forEach((skillDetail) => {
+			const knowledgements = skillDetail.querySelector<HTMLElement>('div.knowledgements');
 			if (knowledgements) {
 				knowledgements.style.display = 'none';
 			}
@@ -49,7 +46,7 @@ export class HomepageComponent implements OnInit {
 
 		skillsDetails.forEach((skillDetail: Element) => {
 			skillDetail.addEventListener('click', () => {
-				const knowledgements: HTMLElement | null = skillDetail.querySelector('div.knowledgements');
+				const knowledgements = skillDetail.querySelector<HTMLElement>('div.knowledgements');
 				if (knowledgements) {
 					knowledgements.style.display = knowledgements.style.display === 'none' ? 'flex' : 'none';
 				}
