@@ -38,7 +38,7 @@
 		"serve:ssr:angular_frontend_boilerplate": "node dist/angular_frontend_boilerplate/server/server.mjs",
 		"security-check": "node ./scripts/security-check.js",
 		"mock-dependencies": "cross-env NODE_PATH=. ts-node --project tsconfig.script.json ./scripts/mock-dependencies.ts",
-		"test": "ng test",
+		"test": "ng test --watch=true --browsers=ChromeHeadless",
 		"prettify": "",
 		"commit": "",
 		"postinstall": ""
