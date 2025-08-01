@@ -1,60 +1,19 @@
-<main id="home-page">
-	<header>
-		<div id="presentation">
-			<div id="photo">
-				<img id="profile-picture" alt="Profile Picture" src="{{myProfilePicture}}">
-			</div>
-			<div id="name-title">
-				<h1>{{myName}}</h1>
-				<h3>{{myOccupation}}</h3>
-			</div>
-			<div id="navbar-options">
-				<ul>
-					<li><a href="#about">About</a></li>
-					<li><a href="#experiences">Experiences</a></li>
-					<li><a href="#skills">Skills</a></li>
-				</ul>
-			</div>
-			<div id="menu-button">
-				<input type="checkbox" id="menu-checkbox" (change)="toggleOptionsMenu()">
-				<label for="menu-checkbox">
-					<img src="assets/menu-icon-white.png" alt="menu icon" id="menu-icon">
-				</label>
-				<div id="menu-options">
-					<nav>
-						<ul>
-							<li><a href="#about">About</a></li>
-							<li><a href="#experiences">Experiences</a></li>
-							<li><a href="#skills">Skills</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+<header>
+	<responsive-navbar></responsive-navbar>
+</header>
 
+<main id="homepage">
 	<div id="page-content">
 		<div id="basic-infos">
 			<div id="about">
-				<h2>About Me</h2>
+				<h2>Transformando ideias em soluções tecnológicas inovadoras!</h2>
 				<p>
-					Software Engineer | Back-End Developer, with previous experience as a Full-Stack Developer.
+					Conte conosco para levar a transformação digital até sua empresa. Nossa equipe de especialistas está pronta
+					para criar soluções personalizadas que atendam às suas necessidades específicas, desde o desenvolvimento de
+					software até a consultoria em tecnologia.
 				</p>
 				<p>
-					Programming since 2018, I have experience with software projects in Node.js (JavaScript and TypeScript),
-					Java, and in the data field with Python. In addition to familiarity with frameworks such as Nest.js, Spring
-					Framework, Next.js, React.js, and Serverless. I have also developed various event-driven systems with
-					real-time processing and response, using technologies such as WebSockets, SQL databases (MySQL, PostgreSQL),
-					and NoSQL (MongoDB, Redis), as well as Cloud platforms like AWS and GCP, with which I implemented solutions
-					for authentication, storage, notification, and messaging. And as a differentiator, always focusing on
-					Performance and Scalability in projects.
-				</p>
-				<p>
-					Highly interested in science and technology, always seeking personal and professional improvement, I yearn
-					for new knowledge and strive to always be productive in what I do.
-				</p>
-				<p>
-					In my free time, I'm traveling to some other world from fiction or fantasy books 📚🤓.
+					Não perca tempo e entre em contato conosco hoje mesmo!
 				</p>
 				<br>
 			</div>
@@ -62,6 +21,7 @@
 			<div id="contact">
 				<h4>Contact</h4>
 				<ul class="contacts">
+					<li id="profile"><a href="{{iconsHref.linkedin}}">Profile Picture</a></li>
 					<li id="linkedin"><a href="{{iconsHref.linkedin}}">LinkedIn</a></li>
 					<li id="github"><a href="{{iconsHref.github}}">GitHub</a></li>
 					<li id="email"><a href="{{iconsHref.email}}">e-Mail</a></li>
@@ -69,282 +29,16 @@
 				</ul>
 				<br>
 			</div>
-			<br>
 		</div>
 
-		<div id="experiences">
-			<h4>Experiences</h4>
-			<div id="exp-list">
-				<div class="experiences">
-					<h5>ADTech: Software Engineer</h5>
-					<p>
-						<br>
-						<strong>
-							January 2024 - Present
-						</strong>
-						<br>
-						Founder
-						<br>
-					</p>
-				</div>
-				<div class="experiences">
-					<h5>Grupo Four: Back-End Developer</h5>
-					<p>
-						<br>
-						<strong>
-							Febuary 2024 - Present
-						</strong>
-						<br>
-						Porto Alegre, RS, Brazil
-						<br>
-					</p>
-				</div>
-				<div class="experiences">
-					<h5>TODOS: Back-End Developer</h5>
-					<p>
-						<br>
-						<strong>
-							October 2023 - January 2024
-						</strong>
-						<br>
-						Ipatinga, MG, Brazil
-						<br>
-					</p>
-				</div>
-				<div class="experiences">
-					<h5>4all: Back-End Developer</h5>
-					<p>
-						<br>
-						<strong>
-							March 2022 - July 2023
-						</strong>
-						<br>
-						Porto Alegre, RS, Brazil
-						<br>
-					</p>
-				</div>
-				<div class="experiences">
-					<h5>DataV: Full-Stack Developer</h5>
-					<p>
-						<br>
-						<strong>
-							December 2020 - March 2022
-						</strong>
-						<br>
-						Vitória, ES, Brazil
-						<br>
-					</p>
-				</div>
-				<div class="experiences">
-					<h5>FAPES: Junior Scientific Initiation Program</h5>
-					<p>
-						<br>
-						<strong>
-							Febuary 2019 - December 2019
-						</strong>
-						<br>
-						Vitória, ES, Brazil
-						<br>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div id="skills">
-			<h4>Skills</h4>
-
-			<div class="skills-block">
-				<h5>Hard Skills</h5>
-
-				<div class="skills-details">
-					<summary>
-						<h6>Languages</h6>
-					</summary>
-					<div class="knowledgements">
-						<div class="knowledgement-block">
-							<h6>Programming Languages</h6>
-							<ul>
-								<li>JavaScript</li>
-								<li>Python</li>
-								<li>C</li>
-								<li>C++</li>
-								<li>Java</li>
-								<li>Arduino</li>
-								<li>Shell Script</li>
-								<li>R</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>Markup and Stylish Languages</h6>
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>MarkDown</li>
-								<li>TeX</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>Data Structures Query Languages</h6>
-							<ul>
-								<li>SQL</li>
-								<li>NoSQL</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="skills-details">
-					<summary>
-						<h6>Dev Tools</h6>
-					</summary>
-					<div class="knowledgements">
-						<div class="knowledgement-block">
-							<h6>Libraries and Frameworks</h6>
-							<ul>
-								<li>TypeScript</li>
-								<li>Node.js</li>
-								<li>React.js</li>
-								<li>Next.js</li>
-								<li>Express.js</li>
-								<li>Socket.io</li>
-								<li>Sequelize ORM</li>
-								<li>Chakra-UI</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>Versioning</h6>
-							<ul>
-								<li>Git</li>
-								<li>GitHub</li>
-								<li>BitBucket</li>
-								<li>GitHub Actions</li>
-								<li>ASDF</li>
-								<li>Semantic Versioning</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>Tests and Mocks</h6>
-							<ul>
-								<li>Jest</li>
-								<li>Selenium</li>
-								<li>Docker</li>
-								<li>Docker Compose</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>DataBases</h6>
-							<ul>
-								<li>MySQL</li>
-								<li>PostgreSQL</li>
-								<li>Redis</li>
-								<li>MongoDB</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="skills-details">
-					<summary>
-						<h6>Infra-Structure</h6>
-					</summary>
-					<div class="knowledgements">
-						<div class="knowledgement-block">
-							<h6>Cloud Services</h6>
-							<ul>
-								<li>AWS</li>
-								<li>Google Cloud</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>Prototyping & Deploy</h6>
-							<ul>
-								<li>Figma</li>
-								<li>MockFlow</li>
-								<li>Vercel</li>
-								<li>Heroku</li>
-								<li>GitHub Pages</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>Operating Systems</h6>
-							<ul>
-								<li>Linux Ubuntu</li>
-								<li>Windows</li>
-								<li>Linux Mint</li>
-								<li>Debian</li>
-								<li>Fedora</li>
-								<li>Arch Linux</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="skills-block">
-				<h5>Soft Skills</h5>
-
-				<div class="skills-details">
-					<summary>
-						<h6>Workflow</h6>
-					</summary>
-					<div class="knowledgements">
-						<div class="knowledgement-block">
-							<h6>Agile</h6>
-							<ul>
-								<li>Scrum</li>
-								<li>Kanban</li>
-								<li>Trello</li>
-								<li>Jira</li>
-								<li>Confluence</li>
-								<li>GitHub Projects</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="skills-details">
-					<summary>
-						<h6>Languages</h6>
-					</summary>
-					<div class="knowledgements">
-						<div class="knowledgement-block">
-							<h6>Portuguese</h6>
-							<ul>
-								<li>native</li>
-							</ul>
-						</div>
-						<div class="knowledgement-block">
-							<h6>English</h6>
-							<ul>
-								<li>intermediate</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="skills-details">
-					<summary>
-						<h6>Others Soft Skills</h6>
-					</summary>
-					<div class="knowledgements">
-						<div class="knowledgement-block">
-							<ul>
-								<li>responsible</li>
-								<li>dedicated</li>
-								<li>good oratory</li>
-								<li>works well in a team</li>
-								<li>always willing to learn</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<footer>
-			<p>
-				by Alvaro Davi &#169; 2025
-			</p>
-		</footer>
+		<login-submit-form />
+		<confirm-button />
+		<cancel-button />
 	</div>
 </main>
+
+<footer>
+	<p>
+		by Alvaro Davi &#169; 2025
+	</p>
+</footer>

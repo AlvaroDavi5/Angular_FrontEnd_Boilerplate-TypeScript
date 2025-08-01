@@ -9,9 +9,9 @@ import { HttpClient } from '@angular/common/http';
 	standalone: false,
 })
 export class LoginSubmitFormComponent {
-	public emailLabel = 'e-Mail';
-	public passwordLabel = 'Senha';
-	public submitLabel = 'Entrar';
+	public readonly emailLabel = 'e-Mail';
+	public readonly passwordLabel = 'Senha';
+	public readonly submitLabel = 'Entrar';
 	public readonly loginForm: FormGroup<{
 		email_input: FormControl<string | null>;
 		password_input: FormControl<string | null>;

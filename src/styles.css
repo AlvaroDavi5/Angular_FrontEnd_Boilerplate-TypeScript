@@ -5,6 +5,13 @@
 	--sky-color: #252558;
 	--dark-color: #02001a;
 	--light-color: #fdf7f7;
+
+	--dark-font: #000000;
+	--light-font: #ffffff;
+	--gray-submit-button: #a9a9a9;
+	--green-submit-button: #b3c001;
+	--green-confirm-button: #22ac00;
+	--red-cancel-button: #c00101;
 }
 
 * {
@@ -24,7 +31,7 @@ body {
 body {
 	height: 100%;
 	width: 100%;
-	color: #ffffff;
+	color: var(--light-font);
 	background-color: var(--dark-color);
 	-webkit-font-smoothing: antialiased;
 }
@@ -55,7 +62,7 @@ h6 {
 
 a {
 	text-decoration: none;
-	color: #000000;
+	color: var(--dark-font);
 }
 
 ul {
@@ -65,8 +72,9 @@ ul {
 button {
 	cursor: pointer;
 	height: 30pt;
+	width: auto;
 	min-width: 60pt;
-	max-width: 90pt;
+	max-width: 150pt;
 	margin: 2px;
 	padding: 0px 30px;
 	font-weight: bolder;
@@ -79,7 +87,8 @@ button {
 }
 
 button:disabled {
-	background-color: #A9A9A9;
+	color: #3f3f3f;
+	background-color: var(--gray-submit-button);
 	cursor: not-allowed;
 	opacity: 1;
 }

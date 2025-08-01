@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ButtonsModule } from '@components/buttons/buttons.module';
 import { FormsModule } from '@components/forms/forms.module';
+import { ResponsiveNavbarComponent } from '@components/navbar/responsive-navbar.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { FormsModule } from '@components/forms/forms.module';
 		FormsModule,
 	],
 	declarations: [
+		ResponsiveNavbarComponent,
 		HomepageComponent,
 	],
 	exports: [

@@ -1,6 +1,11 @@
-@import url("./header.css");
 @import url("./footer.css");
-@import url("./responsive.css");
+
+
+@media (max-width: 800px) {
+	#about {
+		text-align: center;
+	}
+}
 
 
 #page-content a {
@@ -48,6 +53,10 @@
 	display: block;
 }
 
+#contact #profile {
+	background-image: url("https://github.com/AlvaroDavi5.png");
+}
+
 #contact #github {
 	background-image: url("../../../../public/assets/github-icon-white.png");
 	/*
@@ -78,148 +87,4 @@
 	background-size: 40px 40px;
 	background-repeat: no-repeat;
 	background-position: 50% 5px;
-}
-
-#experiences {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin: 10px;
-}
-
-#exp-list {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-around;
-}
-
-.experiences {
-	background-color: #61616128;
-	margin: 10px 15px;
-	padding: 20px;
-	max-width: 260px;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.experiences:hover {
-	color: black;
-	background-color: #fdf7f7b6;
-	box-shadow: 0 0 10px var(--light-color);
-	transition: all 0.8s;
-}
-
-.experiences:hover h5 {
-	color: var(--secondary-color);
-	transition: all 0.8s;
-}
-
-#skills {
-	margin: 10px;
-}
-
-#skills div {
-	margin: 5px;
-}
-
-#skills,
-#skills .skills-block {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-#skills h4 {
-	margin: 25px 10px 15px 10px;
-}
-
-#skills h5 {
-	margin: 10px;
-}
-
-#skills ul {
-	margin: 20px 5px 10px 5px;
-}
-
-#skills li {
-	display: inline-block;
-	margin: 5px;
-	padding: 5px;
-	border-radius: 5px;
-	background-color: rgb(102, 102, 102);
-}
-
-.skills-block {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	justify-items: center;
-	align-content: center;
-	justify-content: center;
-	width: 100%;
-}
-
-.skills-details {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	justify-items: center;
-	align-content: center;
-	justify-content: center;
-	width: 100%;
-}
-
-.skills-details summary {
-	display: flex;
-	align-items: center;
-	justify-items: center;
-	align-content: center;
-	justify-content: center;
-}
-
-.skills-details summary h6 {
-	cursor: pointer;
-	text-align: center;
-	border-radius: 10px;
-	padding: 10px;
-	max-width: 250px;
-}
-
-.skills-details summary:hover h6 {
-	color: var(--secondary-color);
-	background-color: #fdf7f7b6;
-	box-shadow: 0 0 10px var(--light-color);
-	transition: all 0.8s;
-}
-
-.knowledgements {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-around;
-}
-
-.knowledgement-block {
-	background-color: #61616128;
-	margin: 10px 15px;
-	padding: 10px;
-	max-width: 260px;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.knowledgement-block:hover {
-	color: black;
-	background-color: #fdf7f7b6;
-	box-shadow: 0 0 10px var(--light-color);
-	transition: all 0.8s;
-}
-
-.knowledgement-block:hover h6 {
-	color: var(--secondary-color);
-	transition: all 0.8s;
 }

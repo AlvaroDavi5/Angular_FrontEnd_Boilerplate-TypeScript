@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 	standalone: false,
 })
 export class ConfirmButtonComponent {
-	public value = 'Confirm';
+	public readonly value = 'Confirmar';
 
-	public onClick(...args: unknown[]): void {
+	public onClick(..._args: unknown[]): void {
 		console.log(ConfirmButtonComponent.name, 'onClick');
 	}
 }

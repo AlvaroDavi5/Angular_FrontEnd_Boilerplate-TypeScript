@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 	standalone: false,
 })
 export class CancelButtonComponent {
-	public value = 'Cancel';
+	public readonly value = 'Cancelar';
 
-	public onClick(...args: unknown[]): void {
+	public onClick(..._args: unknown[]): void {
 		console.log(CancelButtonComponent.name, 'onClick');
 	}
 }
