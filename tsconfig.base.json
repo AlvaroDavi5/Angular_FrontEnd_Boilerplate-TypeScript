@@ -89,7 +89,7 @@
 		// "declarationDir": "./",
 		// "preserveValueImports": true,
 		/* Interop Constraints */
-		"isolatedModules": true,
+		"isolatedModules": false,
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		// "preserveSymlinks": true,
@@ -126,7 +126,6 @@
 		"strictTemplates": true
 	},
 	"include": [
-		"server.ts",
 		"src/**/*.ts"
 	],
 	"exclude": [
