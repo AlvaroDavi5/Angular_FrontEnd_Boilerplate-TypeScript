@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { PagesModule } from '@pages/pages.module';
-import { PagesRoutingModule } from '@pages/pages-routing.module';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -8,8 +7,7 @@ import { PagesRoutingModule } from '@pages/pages-routing.module';
 	templateUrl: './app.component.html',
 	standalone: true,
 	imports: [
-		PagesModule,
-		PagesRoutingModule,
+		RouterOutlet,
 	],
 })
 export class AppComponent {
