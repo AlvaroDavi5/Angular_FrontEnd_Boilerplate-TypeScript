@@ -64,22 +64,22 @@ ___
 
 - **Concepts**
 	* Modularization
-		- [ ] Dependency Injection
+		- [x] Dependency Injection
 	* Application State
 		- [ ] Page state
 		- [ ] Global states
 	* Components
-		- [ ] Form
+		- [x] Form
 		- [ ] NavBar
 		- [ ] Toast
 		- [ ] DropDown
 		- [ ] Modal
-		- [ ] Image
+		- [x] Image
 		- [ ] Header
 		- [ ] Scroller
 	* Actions
 		- [ ] Validations
-		- [ ] Requests (Http)
+		- [x] Requests (Http)
 		- [ ] Connections (WebSockets)
 		- [ ] Hooks
 - **Tests**
