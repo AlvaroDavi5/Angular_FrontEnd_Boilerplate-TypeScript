@@ -70,7 +70,7 @@ ___
 		- [ ] Global states
 	* Components
 		- [x] Form
-		- [ ] NavBar
+		- [x] NavBar
 		- [ ] Toast
 		- [ ] DropDown
 		- [ ] Modal
