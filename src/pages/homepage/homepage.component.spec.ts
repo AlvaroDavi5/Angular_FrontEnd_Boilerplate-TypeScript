@@ -1,8 +1,8 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { HomepageComponent } from './homepage.component';
-import { AppComponent } from '@app/app.component';
 import { PagesModule } from '@pages/pages.module';
-import { PagesRoutingModule } from '@pages/pages-routing.module';
 
 
 describe('HomepageComponent', () => {
@@ -11,8 +11,11 @@ describe('HomepageComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [AppComponent],
-			providers: [PagesModule, PagesRoutingModule, HomepageComponent],
+			imports: [PagesModule],
+			providers: [
+				provideHttpClient(),
+				provideHttpClientTesting()
+			]
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(HomepageComponent);
@@ -24,14 +27,20 @@ describe('HomepageComponent', () => {
 	});
 
 	it('should have the page title', () => {
-		const fixture = TestBed.createComponent(HomepageComponent);
-		const app = fixture.componentInstance;
-		expect(app.myOccupation).toEqual('Software Engineer');
+		expect(app.iconsHref.github).toEqual('https://github.com/AlvaroDavi5');
 	});
 
-	it('should render the page body title', () => {
+	it('should render the navbar title', () => {
 		fixture.detectChanges();
 		const compiled = fixture.nativeElement as HTMLElement;
-		expect(compiled.querySelector('h1')?.textContent).toBe('Álvaro Alves');
+		const h1Element = compiled.querySelector('nav h1');
+		expect(h1Element?.textContent).toContain('AD Tech Solutions');
+	});
+
+	it('should render the footer text', () => {
+		fixture.detectChanges();
+		const compiled = fixture.nativeElement as HTMLElement;
+		const footerElement = compiled.querySelector('footer p');
+		expect(footerElement?.textContent).toContain('Álvaro Alves');
 	});
 });
