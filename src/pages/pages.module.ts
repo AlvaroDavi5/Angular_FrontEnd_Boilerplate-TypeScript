@@ -5,19 +5,9 @@ import { ButtonsModule } from '@components/buttons/buttons.module';
 import { FormsModule } from '@components/forms/forms.module';
 import { ResponsiveNavbarComponent } from '@components/navbar/responsive-navbar.component';
 
-
 @NgModule({
-	imports: [
-		CommonModule,
-		ButtonsModule,
-		FormsModule,
-	],
-	declarations: [
-		ResponsiveNavbarComponent,
-		HomepageComponent,
-	],
-	exports: [
-		HomepageComponent,
-	],
+	imports: [CommonModule, ButtonsModule, FormsModule],
+	declarations: [ResponsiveNavbarComponent, HomepageComponent],
+	exports: [HomepageComponent],
 })
-export class PagesModule { }
+export class PagesModule {}

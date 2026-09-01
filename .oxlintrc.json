@@ -1,0 +1,255 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"plugins": [
+		"typescript",
+		"oxc",
+		"unicorn",
+		"import",
+		"promise"
+	],
+	"categories": {
+		"correctness": "error",
+		"suspicious": "warn",
+		"perf": "warn"
+	},
+	"env": {
+		"builtin": true,
+		"es2024": true,
+		"browser": true,
+		"node": true
+	},
+	"options": {
+		"reportUnusedDisableDirectives": "warn"
+	},
+	"ignorePatterns": [
+		"node_modules",
+		"build",
+		"dist",
+		".angular",
+		"coverage",
+		"public"
+	],
+	"rules": {
+		// * --- Correctness ---
+		"eqeqeq": [
+			"error",
+			"always"
+		],
+		"valid-typeof": "error",
+		"use-isnan": "error",
+		"no-cond-assign": "error",
+		"no-constant-binary-expression": "error",
+		"no-self-compare": "error",
+		"no-unsafe-optional-chaining": "error",
+		"no-return-assign": [
+			"error",
+			"always"
+		],
+		"no-unused-expressions": "error",
+		"no-fallthrough": "error",
+		"default-case": "error",
+		"default-case-last": "error",
+		"default-param-last": "error",
+		"guard-for-in": "error",
+		"array-callback-return": "error",
+		// * --- Language restrictions ---
+		"no-var": "error",
+		"no-eval": "error",
+		"no-implied-eval": "error",
+		"no-new-func": "error",
+		"no-new-wrappers": "error",
+		"no-throw-literal": "error",
+		"no-labels": "error",
+		"no-bitwise": "error",
+		"no-with": "error",
+		"no-alert": "error",
+		"no-script-url": "error",
+		"no-debugger": "error",
+		"no-console": "warn",
+		// * --- Modern syntax preferences ---
+		"prefer-const": "warn",
+		"prefer-template": "error",
+		"prefer-spread": "error",
+		"prefer-rest-params": "error",
+		"prefer-object-spread": "warn",
+		"prefer-promise-reject-errors": "error",
+		"object-shorthand": "warn",
+		"dot-notation": [
+			"error",
+			{
+				"allowKeywords": true
+			}
+		],
+		"radix": "warn",
+		"yoda": [
+			"error",
+			"never",
+			{
+				"exceptRange": true
+			}
+		],
+		"unicode-bom": [
+			"error",
+			"never"
+		],
+		// * --- Naming and shadowing ---
+		"no-shadow": [
+			"error",
+			{
+				"hoist": "all"
+			}
+		],
+		"no-shadow-restricted-names": "error",
+		"no-redeclare": "error",
+		"no-use-before-define": [
+			"error",
+			{
+				"functions": false,
+				"classes": true
+			}
+		],
+		"no-unused-vars": [
+			"error",
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_"
+			}
+		],
+		// ? Angular components rely on decorated members and DI, not on globals
+		"no-undef": "off",
+		"no-underscore-dangle": "off",
+		// * --- Structure ---
+		"complexity": [
+			"warn",
+			20
+		],
+		"max-classes-per-file": [
+			"error",
+			1
+		],
+		"no-empty": "error",
+		"no-empty-function": [
+			"error",
+			{
+				"allow": [
+					"constructors"
+				]
+			}
+		],
+		// ? Angular injects dependencies through otherwise-empty constructors
+		"no-useless-constructor": "off",
+		"curly": "off",
+		"arrow-body-style": "off",
+		// * --- TypeScript ---
+		"typescript/ban-ts-comment": "error",
+		"typescript/array-type": "error",
+		"typescript/consistent-type-assertions": "error",
+		"typescript/consistent-type-imports": "off",
+		"typescript/adjacent-overload-signatures": "error",
+		"typescript/unified-signatures": "error",
+		"typescript/prefer-function-type": "error",
+		"typescript/prefer-for-of": "error",
+		"typescript/prefer-namespace-keyword": "error",
+		"typescript/no-namespace": "error",
+		"typescript/no-misused-new": "error",
+		"typescript/no-var-requires": "error",
+		"typescript/no-empty-interface": "error",
+		"typescript/no-explicit-any": "warn",
+		"typescript/no-non-null-assertion": "off",
+		// ? Angular decorators declare dependencies as constructor parameter properties
+		"typescript/parameter-properties": "off",
+		"typescript/no-extraneous-class": "off",
+		"typescript/explicit-member-accessibility": "off",
+		"typescript/no-restricted-types": [
+			"error",
+			{
+				"types": {
+					"Object": {
+						"message": "Avoid using the `Object` type. Did you mean `object`?"
+					},
+					"Function": {
+						"message": "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
+					},
+					"Boolean": {
+						"message": "Avoid using the `Boolean` type. Did you mean `boolean`?"
+					},
+					"Number": {
+						"message": "Avoid using the `Number` type. Did you mean `number`?"
+					},
+					"String": {
+						"message": "Avoid using the `String` type. Did you mean `string`?"
+					},
+					"Symbol": {
+						"message": "Avoid using the `Symbol` type. Did you mean `symbol`?"
+					}
+				}
+			}
+		],
+		// * --- Imports ---
+		"import/default": "error",
+		"import/no-self-import": "error",
+		"import/no-duplicates": "warn",
+		// * --- Promises ---
+		// ? The Angular SSR scaffold legitimately hands `next` to `.then`/`.catch`
+		"promise/no-callback-in-promise": "off",
+		"promise/no-return-wrap": "error",
+		"promise/param-names": "error",
+		"promise/prefer-await-to-then": "off",
+		// * --- Unicorn ---
+		"unicorn/no-useless-fallback-in-spread": "off",
+		"unicorn/prefer-node-protocol": "off",
+		"unicorn/prefer-query-selector": "off",
+		"unicorn/no-null": "off"
+	},
+	"overrides": [
+		// ? Karma/Jasmine specs run against browser globals and stub types freely
+		{
+			"files": [
+				"**/*.spec.ts"
+			],
+			"env": {
+				"jasmine": true
+			},
+			"rules": {
+				"no-console": "off",
+				"max-classes-per-file": "off",
+				"no-empty-function": "off",
+				"typescript/no-explicit-any": "off",
+				// ? Specs often inject fixtures ahead of the tests that will exercise them
+				"no-unused-vars": "warn"
+			}
+		},
+		// ? Mocked servers and maintenance scripts write to stdout by design
+		{
+			"files": [
+				"src/dev/**",
+				"scripts/**"
+			],
+			"rules": {
+				"no-console": "off",
+				"typescript/no-explicit-any": "off"
+			}
+		},
+		// ? The SSR entrypoints are Node processes, not browser code
+		{
+			"files": [
+				"src/server.ts",
+				"src/main.server.ts",
+				"src/app/app.config.server.ts"
+			],
+			"rules": {
+				"no-console": "off"
+			}
+		},
+		// ? Ambient declaration files are never modules
+		{
+			"files": [
+				"**/*.d.ts"
+			],
+			"rules": {
+				"import/unambiguous": "off"
+			}
+		}
+	]
+}

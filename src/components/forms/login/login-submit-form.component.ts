@@ -19,11 +19,11 @@ export class LoginSubmitFormComponent {
 
 	constructor(
 		private readonly formBuilder: FormBuilder,
-		private readonly httpClient: HttpClient,
+		private readonly httpClient: HttpClient
 	) {
 		this.loginForm = this.formBuilder.group({
 			email_input: ['', [Validators.required, Validators.email]],
-			password_input: ['', Validators.required]
+			password_input: ['', Validators.required],
 		});
 	}
 
@@ -31,14 +31,13 @@ export class LoginSubmitFormComponent {
 		const { email_input: email, password_input: password } = this.loginForm.value;
 
 		const payload = { email, password };
-		this.httpClient.post<unknown>('http://seu-backend.com/api/formulario', payload)
-			.subscribe({
-				next: (res) => {
-					console.log('Sucesso:', res);
-				},
-				error: (err) => {
-					console.error('Erro:', err);
-				}
-			});
+		this.httpClient.post<unknown>('http://seu-backend.com/api/formulario', payload).subscribe({
+			next: (res) => {
+				console.log('Sucesso:', res);
+			},
+			error: (err) => {
+				console.error('Erro:', err);
+			},
+		});
 	}
 }

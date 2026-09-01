@@ -17,14 +17,16 @@ Node.js Boilerplate for Front-End using TypeScript and Angular.
 - **Express**: Robust tooling for HTTP servers;
 - **Joi**: Schema validator library;
 - **Jest**: Testing Framework;
-- **ESLint**: JavaScript/TypeScript linter and formatter;
+- **Oxlint**: Rust-based JavaScript/TypeScript linter;
+- **Oxfmt**: Rust-based formatter for TypeScript, HTML templates, stylesheets, JSON, YAML and Markdown;
 - **Huksy**: Git hooks tool used to check tests, format the code and the commits;
 
 ---
 
 ### Install dependencies
 
-1. Install project dependencies  
+1. Install project dependencies
+
 ```shell
 npm install
 ```
@@ -39,7 +41,8 @@ npm install
 
 ## Environment Preparation
 
-1. Copy dotenv file  
+1. Copy dotenv file
+
 ```shell
 cp envs/.env.local ./.env # copy development local example
 source ./.env # load envs on shell session
@@ -54,34 +57,34 @@ npm run start:dev # start application in development mode
 
 ## Interface
 
-- [localhost:3000](http://localhost:3000/) - Application Interface  
-	* `/` - Index Page
-- [localhost:4000](http://localhost:4000/) - Mocked Back-End Page  
+- [localhost:3000](http://localhost:3000/) - Application Interface
+  - `/` - Index Page
+- [localhost:4000](http://localhost:4000/) - Mocked Back-End Page
 
-___
+---
 
 ### TO DO
 
 - **Concepts**
-	* Modularization
-		- [x] Dependency Injection
-	* Application State
-		- [ ] Page state
-		- [ ] Global states
-	* Components
-		- [x] Form
-		- [x] NavBar
-		- [ ] Toast
-		- [ ] DropDown
-		- [ ] Modal
-		- [x] Image
-		- [ ] Header
-		- [ ] Scroller
-	* Actions
-		- [ ] Validations
-		- [x] Requests (Http)
-		- [ ] Connections (WebSockets)
-		- [ ] Hooks
+  - Modularization
+    - [x] Dependency Injection
+  - Application State
+    - [ ] Page state
+    - [ ] Global states
+  - Components
+    - [x] Form
+    - [x] NavBar
+    - [ ] Toast
+    - [ ] DropDown
+    - [ ] Modal
+    - [x] Image
+    - [ ] Header
+    - [ ] Scroller
+  - Actions
+    - [ ] Validations
+    - [x] Requests (Http)
+    - [ ] Connections (WebSockets)
+    - [ ] Hooks
 - **Tests**
-	- [ ] Component Render Test
-	- [ ] Page Render Test
+  - [ ] Component Render Test
+  - [ ] Page Render Test

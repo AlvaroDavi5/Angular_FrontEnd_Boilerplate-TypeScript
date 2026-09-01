@@ -1,12 +1,6 @@
-import {
-	AngularNodeAppEngine,
-	createNodeRequestHandler,
-	isMainModule,
-	writeResponseToNodeResponse,
-} from '@angular/ssr/node';
+import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
-
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
@@ -22,7 +16,7 @@ expressServer.use(
 		maxAge: '1y',
 		index: false,
 		redirect: false,
-	}),
+	})
 );
 // * Example Express Rest API endpoints
 // * server.get('/api/**', (req, res) => { });
@@ -31,9 +25,7 @@ expressServer.use(
 expressServer.use((req, res, next) => {
 	angularAppEngine
 		.handle(req)
-		.then((response) =>
-			response ? writeResponseToNodeResponse(response, res) : next(),
-		)
+		.then((response) => (response ? writeResponseToNodeResponse(response, res) : next()))
 		.catch(next);
 });
 

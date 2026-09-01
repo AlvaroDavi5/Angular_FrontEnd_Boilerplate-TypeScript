@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component({
 	selector: 'confirm-button',
 	templateUrl: './confirm-button.component.html',

@@ -4,7 +4,6 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { HomepageComponent } from './homepage.component';
 import { PagesModule } from '@pages/pages.module';
 
-
 describe('HomepageComponent', () => {
 	let fixture: ComponentFixture<HomepageComponent>;
 	let app: HomepageComponent;
@@ -12,10 +11,7 @@ describe('HomepageComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			imports: [PagesModule],
-			providers: [
-				provideHttpClient(),
-				provideHttpClientTesting()
-			]
+			providers: [provideHttpClient(), provideHttpClientTesting()],
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(HomepageComponent);

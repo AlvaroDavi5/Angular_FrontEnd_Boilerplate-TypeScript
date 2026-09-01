@@ -20,7 +20,6 @@
 	padding: 0;
 }
 
-
 html,
 body {
 	font-family: Roboto, sans-serif;
@@ -35,7 +34,6 @@ body {
 	background-color: var(--dark-color);
 	-webkit-font-smoothing: antialiased;
 }
-
 
 h1,
 h2,
@@ -58,7 +56,6 @@ h5 {
 h6 {
 	font-size: 0.9rem;
 }
-
 
 a {
 	text-decoration: none;

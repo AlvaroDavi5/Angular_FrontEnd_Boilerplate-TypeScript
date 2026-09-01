@@ -1,6 +1,5 @@
 import { Router, Request, Response } from 'express';
 
-
 let toggle = 0;
 
 export default {

@@ -5,7 +5,6 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { PagesRoutingModule } from '@pages/pages-routing.module';
 
-
 export const appConfig: ApplicationConfig = {
 	providers: [
 		provideClientHydration(),
@@ -13,5 +12,5 @@ export const appConfig: ApplicationConfig = {
 		provideHttpClient(withFetch()),
 		importProvidersFrom(PagesRoutingModule),
 		provideRouter(routes),
-	]
+	],
 };

@@ -18,9 +18,7 @@ export class ResponsiveNavbarComponent implements OnInit {
 	};
 	private menuEnabled = false;
 
-	constructor(
-		private readonly elementRef: ElementRef<HTMLElement>,
-	) { }
+	constructor(private readonly elementRef: ElementRef<HTMLElement>) {}
 
 	public ngOnInit(): void {
 		this.initializeOptionsMenu();

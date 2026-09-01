@@ -4,12 +4,11 @@ import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { AppComponent } from './app.component';
 
-
 @Component({
 	template: '<h1>Test Component</h1>',
 	standalone: false,
 })
-class TestComponent { }
+class TestComponent {}
 
 describe('AppComponent', () => {
 	let fixture: ComponentFixture<AppComponent>;

@@ -12,9 +12,26 @@ trim_trailing_whitespace = true
 end_of_line = lf
 insert_final_newline = true
 
+[*.{js,mjs,cjs,ts,mts,cts}]
+spaces_around_operators = true
+spaces_around_brackets = inside
+curly_bracket_next_line = false
+
+[*.{html,css,scss}]
+max_line_length = 190
+
+[*.{json,jsonc}]
+max_line_length = 190
+
 [*.md]
+max_line_length = 120
 trim_trailing_whitespace = false
 
-[*.yml]
+[*.{yml,yaml}]
 indent_style = space
+indent_size = 2
+max_line_length = 120
+
+[*.{sh,bash,zsh}]
+indent_style = tab
 indent_size = 2

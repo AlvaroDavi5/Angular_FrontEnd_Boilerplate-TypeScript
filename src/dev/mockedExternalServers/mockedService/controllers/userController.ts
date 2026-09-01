@@ -1,6 +1,5 @@
 import { Router, Request, Response } from 'express';
 
-
 export default {
 	login: async (req: Request, res: Response) => {
 		const { authorization } = req.headers;

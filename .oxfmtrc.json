@@ -1,0 +1,71 @@
+{
+	"$schema": "./node_modules/oxfmt/configuration_schema.json",
+	"singleQuote": true,
+	"quoteProps": "as-needed",
+	"semi": true,
+	"trailingComma": "es5",
+	"printWidth": 160,
+	"tabWidth": 2,
+	"useTabs": true,
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"arrowParens": "always",
+	"objectWrap": "preserve",
+	"htmlWhitespaceSensitivity": "css",
+	"singleAttributePerLine": false,
+	"embeddedLanguageFormatting": "auto",
+	"proseWrap": "never",
+	"endOfLine": "lf",
+	"insertFinalNewline": true,
+	"sortPackageJson": false,
+	"ignorePatterns": [
+		"node_modules",
+		"build",
+		"dist",
+		".angular",
+		"coverage",
+		"package-lock.json"
+	],
+	"overrides": [
+		// ? Angular templates and stylesheets get more room before wrapping
+		{
+			"files": [
+				"*.html",
+				"*.css",
+				"*.scss"
+			],
+			"options": {
+				"printWidth": 190
+			}
+		},
+		// ? Configuration and data files are wide but never wrapped mid-value
+		{
+			"files": [
+				"*.json",
+				"*.jsonc"
+			],
+			"options": {
+				"printWidth": 190
+			}
+		},
+		// ? Prose keeps a narrower, reviewable width
+		{
+			"files": [
+				"*.md"
+			],
+			"options": {
+				"printWidth": 120
+			}
+		},
+		{
+			"files": [
+				"*.yml",
+				"*.yaml"
+			],
+			"options": {
+				"printWidth": 120,
+				"proseWrap": "always"
+			}
+		}
+	]
+}

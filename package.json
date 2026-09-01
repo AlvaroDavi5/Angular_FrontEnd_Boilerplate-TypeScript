@@ -40,7 +40,11 @@
 		"security-check": "ts-node --project tsconfig.json ./scripts/security-check.ts",
 		"mock-dependencies": "cross-env NODE_PATH=. ts-node --project tsconfig.script.json ./scripts/mock-dependencies.ts",
 		"test": "ng test --watch=false --browsers=ChromeHeadless",
-		"prettify": "",
+		"lint": "oxlint --config .oxlintrc.json src scripts",
+		"lint:fix": "oxlint --config .oxlintrc.json src scripts --quiet --fix",
+		"lint:strict": "oxlint --config .oxlintrc.json src scripts --deny-warnings",
+		"format": "oxfmt --check src scripts",
+		"format:fix": "oxfmt src scripts",
 		"commit": "",
 		"postinstall": ""
 	},
@@ -76,6 +80,8 @@
 		"karma-coverage": "~2.2.1",
 		"karma-jasmine": "~5.1.0",
 		"karma-jasmine-html-reporter": "~2.1.0",
+		"oxfmt": "^0.62.0",
+		"oxlint": "^1.80.0",
 		"ts-node": "^10.9.2",
 		"tsconfig-paths": "^4.2.0",
 		"typescript": "~5.9.3"
