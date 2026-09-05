@@ -1,25 +1,22 @@
-# Angular Front-End Boilerplate :fire:
+# AD Tech Solutions - Page :fire:
 
 ## Description
 
-Node.js Boilerplate for Front-End using TypeScript and Angular.
+Company page for **AD Tech Solutions**, showcasing their services and expertise in technology solutions.
+
+Built with Angular and server-side rendering (SSR) for a fast, SEO-friendly public site.
 
 ## Overview
 
 ### Main technologies
 
-- **JavaScript**: Web programming language;
 - **TypeScript**: JavaScript superset for typing;
-- **Node.js**: JavaScript runtime;
-- **Angular**: TypeScript Framework for Front-End;
-- **Axios**: HTTP requests tool;
-- **Socket.io**: WebSocket library;
-- **Express**: Robust tooling for HTTP servers;
-- **Joi**: Schema validator library;
-- **Jest**: Testing Framework;
+- **Angular**: Front-End framework, with Server-Side Rendering (SSR) and prerendering;
+- **Express**: HTTP server used to serve the Angular SSR build;
+- **RxJS**: Reactive programming library used by Angular;
+- **Jasmine / Karma**: Testing framework and test runner;
 - **Oxlint**: Rust-based JavaScript/TypeScript linter;
 - **Oxfmt**: Rust-based formatter for TypeScript, HTML templates, stylesheets, JSON, YAML and Markdown;
-- **Huksy**: Git hooks tool used to check tests, format the code and the commits;
 
 ---
 
@@ -39,27 +36,32 @@ npm install
 - If necessary, merge with a hotfix on git;
 - Rebuild the project and restart the service;
 
-## Environment Preparation
-
-1. Copy dotenv file
-
-```shell
-cp envs/.env.local ./.env # copy development local example
-source ./.env # load envs on shell session
-```
-
 ## Running Locally
 
 ```shell
-npm run mock-dependencies # start external service mock
 npm run start:dev # start application in development mode
+```
+
+## Building
+
+```shell
+npm run build          # production build (with prerendering)
+npm run build:watch    # development build, rebuilding on file changes
+npm run serve:ssr:angular_frontend_boilerplate # serve the SSR build
 ```
 
 ## Interface
 
-- [localhost:3000](http://localhost:3000/) - Application Interface
-  - `/` - Index Page
-- [localhost:4000](http://localhost:4000/) - Mocked Back-End Page
+- [localhost:3001](http://localhost:3001/) - Application Interface
+
+---
+
+### Project structure
+
+- `src/app` - Application root component and routes;
+- `src/pages` - Page components (e.g. homepage, not-found);
+- `src/components` - Reusable UI components (navbar, forms, buttons);
+- `scripts` - Support scripts (e.g. dependency mocking, security check);
 
 ---
 
@@ -77,14 +79,14 @@ npm run start:dev # start application in development mode
     - [ ] Toast
     - [ ] DropDown
     - [ ] Modal
-    - [x] Image
+    - [ ] Image
     - [ ] Header
     - [ ] Scroller
   - Actions
-    - [ ] Validations
+    - [x] Validations
     - [x] Requests (Http)
     - [ ] Connections (WebSockets)
-    - [ ] Hooks
+    - [x] Hooks
 - **Tests**
-  - [ ] Component Render Test
-  - [ ] Page Render Test
+  - [x] Component Render Test
+  - [x] Page Render Test
