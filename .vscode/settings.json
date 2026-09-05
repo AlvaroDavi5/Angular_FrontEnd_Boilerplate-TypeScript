@@ -40,10 +40,10 @@
 	"vsicons.presets.angular": true,
 	"vsicons.presets.tsOfficial": true,
 	"vsicons.presets.jsOfficial": true,
-	"editorconfig.generateAuto": true,
-	"editorconfig.template": "default",
 	"oxc.enable.oxlint": true,
 	"oxc.enable.oxfmt": true,
+	"eslint.enable": false,
+	"eslint.format.enable": false,
 	"oxc.configPath": ".oxlintrc.json",
 	"oxc.fmt.configPath": ".oxfmtrc.json",
 	"diffEditor.ignoreTrimWhitespace": false,
@@ -52,6 +52,9 @@
 	"js/ts.updateImportsOnFileMove.enabled": "always",
 	"github.copilot.nextEditSuggestions.enabled": true,
 	"[ignore]": {
+		"editor.defaultFormatter": "EditorConfig.EditorConfig"
+	},
+	"[editorconfig]": {
 		"editor.defaultFormatter": "EditorConfig.EditorConfig"
 	},
 	"[chatagent]": {
@@ -69,16 +72,19 @@
 	"[markdown]": {
 		"editor.defaultFormatter": "vscode.markdown-language-features"
 	},
-	"[typescript]": {
-		"editor.defaultFormatter": "oxc.oxc-vscode"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "oxc.oxc-vscode"
-	},
 	"[html]": {
 		"editor.defaultFormatter": "oxc.oxc-vscode"
 	},
 	"[css]": {
+		"editor.defaultFormatter": "oxc.oxc-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "oxc.oxc-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "oxc.oxc-vscode"
+	},
+	"[typescriptreact]": {
 		"editor.defaultFormatter": "oxc.oxc-vscode"
 	},
 	"[yaml]": {
