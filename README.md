@@ -1,4 +1,4 @@
-# AD Tech Solutions - Page :fire:
+# AD Tech Solutions - Page :man_technologist:
 
 ## Description
 
